@@ -5,8 +5,8 @@ provider "aws" {
   version = "~>2.0"
   #access_key = var.access_key 
   #secret_key = var.secret_key
+  #shared_credentials_file = "/home/alvaro/.aws/credentials"
   region     = var.region
-  shared_credentials_file = "/home/alvaro/.aws/credentials"
   profile = "terraform"
 }
 
