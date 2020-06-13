@@ -6,7 +6,7 @@ provider "aws" {
   #access_key = var.access_key 
   #secret_key = var.secret_key
   region     = var.region
-  shared_credentials_file = "~/.aws/credentials"
+  shared_credentials_file = "/home/alvaro/.aws/credentials"
   profile = "terraform"
 }
 
