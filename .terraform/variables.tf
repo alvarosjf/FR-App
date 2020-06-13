@@ -1,6 +1,6 @@
 # variables.tf
 variable "access_key" {
-     default = "<My acces_key>"
+     default = "<My access_key>"
 }
 variable "secret_key" {
      default = "<My secret_key>"
