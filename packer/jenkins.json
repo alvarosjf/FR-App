@@ -1,0 +1,22 @@
+{
+    "builders": [
+        {
+      "type": "amazon-ebs",
+      "region": "eu-west-1",
+      "profile": "terraform",
+      "source_ami": "ami-0ea3405d2d2522162",
+      "instance_type": "t2.micro",
+      "ssh_username": "ec2-user",
+      "ami_name": "jenkins {{timestamp}}",
+      "vpc_id": "{{user `aws_vpc_id`}}",
+      "subnet_id": "{{user `aws_subnet_id`}}",
+      "associate_public_ip_address": true
+      }
+      ],
+      "provisioners": [
+          {
+            "type": "shell",
+            "script": "scripts/jenkins.sh"
+          }
+        ]
+      }
